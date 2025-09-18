@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agborex Portfolio</title>
+
+    <!-- Tailwind CDN (utility-first CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Basic meta for corporate-ready appearance -->
+    <meta
+      name="description"
+      content="Frontend Developer Portfolio — Minimal, responsive, and corporate-ready."
+    />
+  </head>
+  <body class="antialiased text-gray-800 bg-white">
+    <!-- ===== Page wrapper / container ===== -->
+    <div class="min-h-screen flex flex-col">
+      <!-- ===== Header / Nav (sticky, minimalist) ===== -->
+      <header class="w-full bg-white/60 backdrop-blur-sm border-b">
+        <div
+          class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <a href="#hero" class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-md bg-gray-900 text-white flex items-center justify-center font-semibold"
+            >
+              A
+            </div>
+            <span class="text-lg font-medium">Agborex</span>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm">
+            <a href="#about" class="hover:underline">About</a>
+            <a href="#skills" class="hover:underline">Skills</a>
+            <a href="#projects" class="hover:underline">Projects</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+            <a
+              href="#footer"
+              class="ml-3 inline-block px-3 py-2 border rounded-md text-sm hover:bg-gray-50"
+              >Resume</a
+            >
+          </nav>
+
+          <div class="md:hidden">
+            <!-- Mobile nav anchor links are kept simple: clicking opens section via anchor -->
+            <button
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+              aria-label="Toggle menu"
+              class="p-2 rounded-md hover:bg-gray-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 8h16M4 16h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t">
+          <div class="px-6 py-4 flex flex-col gap-3">
+            <a href="#about" class="block">About</a>
+            <a href="#skills" class="block">Skills</a>
+            <a href="#projects" class="block">Projects</a>
+            <a href="#contact" class="block">Contact</a>
+            <a href="#footer" class="block">Resume</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== HERO SECTION ===== -->
+      <!-- Full-screen-ish hero with CTA buttons -->
+      <main id="hero" class="flex-grow">
+        <section class="max-w-6xl mx-auto px-6 py-14 md:py-24">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <!-- Hero text -->
+            <div>
+              <p class="text-sm text-gray-500 uppercase tracking-wide">
+                Frontend Developer
+              </p>
+              <h1
+                class="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight"
+              >
+                Agbo Emmanuel
+              </h1>
+              <p class="mt-4 text-lg text-gray-600 max-w-xl">
+                I build accessible, high-performance frontend experiences using
+                React, TailwindCSS and modern best practices. Focused on clean
+                code, product thinking, and shipping fast.
+              </p>
+
+              <div class="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="/resume.pdf"
+                  download
+                  class="inline-flex items-center gap-2 px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-50"
+                >
+                  <!-- Download icon -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 14a1 1 0 011-1h3v2H5v1h10v-1h-2v-2h3a1 1 0 011 1v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zM9 3a1 1 0 011-1h0a1 1 0 011 1v7h3l-4 4-4-4h3V3z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Download Resume
+                </a>
+
+                <a
+                  href="#contact"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-md text-sm font-medium hover:opacity-95"
+                >
+                  Contact Me
+                </a>
+              </div>
+
+              <!-- Quick facts / meta -->
+              <ul class="mt-8 flex gap-6 text-sm text-gray-500">
+                <li>
+                  <strong class="text-gray-700">Location:</strong> Lagos,
+                  Nigeria
+                </li>
+                <li>
+                  <strong class="text-gray-700">Open to:</strong> Remote /
+                  Contract
+                </li>
+              </ul>
+            </div>
+
+            <!-- Hero image placeholder -->
+            <div class="flex items-center justify-center">
+              <div
+                class="w-full max-w-md rounded-xl border flex items-center justify-center bg-gray-50"
+              >
+                <!-- Placeholder for a portrait / developer photo
+                <div
+                  class="w-48 h-48 rounded-md bg-gray-200 flex items-center justify-center"
+                ></div> -->
+                <img
+                  src="./images/profile image.jpg"
+                  alt="hero-image"
+                  class="w-full h-[450px] object-cover rounded-[inherit]"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="border-t">
+          <div class="max-w-4xl mx-auto px-6 py-12 md:py-16">
+            <!-- Section heading -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-semibold">About</h2>
+              <p class="mt-2 text-gray-600">
+                A short professional bio highlighting experience and strengths.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+              <!-- Photo (placeholder) -->
+              <div class="md:col-span-1 flex items-start">
+                <div
+                  class="w-[300px] h-[300px] rounded-lg bg-gray-100 border flex items-center justify-center"
+                >
+                  <img
+                    src="./images/profile image.jpg"
+                    alt="hero-image"
+                    class="w-full h-full object-cover rounded-[inherit]"
+                  />
+                  <!-- <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-12 w-12 text-gray-300"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M6 20v-1c0-1.657 3.582-3 6-3s6 1.343 6 3v1"
+                    />
+                  </svg> -->
+                </div>
+              </div>
+
+              <!-- Bio -->
+              <div class="md:col-span-2">
+                <p class="text-gray-700 leading-relaxed">
+                  I am a Frontend Developer with 2+ years of experience building
+                  scalable, responsive, and user-friendly web applications.
+                  Proficient in React, TypeScript, and TailwindCSS, I focus on
+                  performance, accessibility, and delivering seamless user
+                  experiences. I thrive in cross-functional teams, collaborating
+                  to ship polished products that solve real-world problems.
+                </p>
+
+                <ul
+                  class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-600"
+                >
+                  <li>
+                    <strong class="text-gray-700">Experience:</strong> 2+ years
+                    building web applications
+                  </li>
+                  <li>
+                    <strong class="text-gray-700">Stack:</strong> React,
+                    TailwindCSS,CSS, JS, HTML, Node basics
+                  </li>
+                  <li>
+                    <strong class="text-gray-700">Interests:</strong>
+                    Performance, accessibility, component libraries
+                  </li>
+                  <li>
+                    <strong class="text-gray-700">Languages:</strong> English
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="border-t">
+          <div class="max-w-6xl mx-auto px-6 py-12 md:py-16">
+            <div class="mb-8">
+              <h2 class="text-2xl font-semibold">Skills</h2>
+              <p class="mt-2 text-gray-600">
+                Core frontend skills and tooling I use regularly.
+              </p>
+            </div>
+
+            <!-- Skills grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              <!-- Each skill is a chip-style card -->
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  R
+                </div>
+                <div>
+                  <div class="text-sm font-medium">React</div>
+                  <div class="text-xs text-gray-500">Components & hooks</div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  TS
+                </div>
+                <div>
+                  <div class="text-sm font-medium">TypeScript</div>
+                  <div class="text-xs text-gray-500">Types & safety</div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  JS
+                </div>
+                <div>
+                  <div class="text-sm font-medium">JavaScript</div>
+                  <div class="text-xs text-gray-500">ES6+ & patterns</div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  TW
+                </div>
+                <div>
+                  <div class="text-sm font-medium">TailwindCSS</div>
+                  <div class="text-xs text-gray-500">Utility-first styling</div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  GT
+                </div>
+                <div>
+                  <div class="text-sm font-medium">Git</div>
+                  <div class="text-xs text-gray-500">
+                    Version control & workflows
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  GH
+                </div>
+                <div>
+                  <div class="text-sm font-medium">GitHub</div>
+                  <div class="text-xs text-gray-500">
+                    Collaboration & repositories
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="p-3 rounded-lg border bg-white flex items-center gap-3"
+              >
+                <div
+                  class="w-9 h-9 rounded-md bg-gray-100 flex items-center justify-center text-sm font-semibold"
+                >
+                  UI
+                </div>
+                <div>
+                  <div class="text-sm font-medium">Design Systems</div>
+                  <div class="text-xs text-gray-500">Component libraries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== PROJECTS SECTION ===== -->
+        <section id="projects" class="border-t">
+          <div class="max-w-6xl mx-auto px-6 py-12 md:py-16">
+            <div class="mb-8">
+              <h2 class="text-2xl font-semibold">Projects</h2>
+              <p class="mt-2 text-gray-600">
+                A selection of projects demonstrating my frontend skills with
+                links to GitHub and live demos.
+              </p>
+            </div>
+
+            <!-- Projects grid -->
+            <div
+              id="projects-grid"
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            ></div>
+          </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section
+          id="contact"
+          class="relative border-t bg-[url('https://via.placeholder.com/1600x900')] bg-cover bg-center bg-no-repeat"
+        >
+          <!-- Glass overlay -->
+          <div class="absolute inset-0 bg-black/40"></div>
+
+          <div class="relative max-w-4xl mx-auto px-6 py-12 md:py-16">
+            <!-- Section Header -->
+            <div class="mb-8 text-center">
+              <h2 class="text-3xl font-semibold text-white">Contact</h2>
+              <p class="mt-2 text-gray-200">
+                Reach out for opportunities, collaboration, or a quick chat.
+              </p>
+            </div>
+
+            <!-- Glass container -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white/20 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-white/30"
+            >
+              <!-- Contact form -->
+              <form
+                class="space-y-4"
+                action="#"
+                method="POST"
+                onsubmit="alert('Replace with your form handler'); return false;"
+              >
+                <div>
+                  <label class="sr-only" for="name">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full rounded-md border border-white/30 bg-white/30 text-white placeholder-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label class="sr-only" for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                    class="w-full rounded-md border border-white/30 bg-white/30 text-white placeholder-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    placeholder="you@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label class="sr-only" for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    class="w-full rounded-md border border-white/30 bg-white/30 text-white placeholder-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    placeholder="Write a brief message"
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="inline-flex items-center gap-2 px-5 py-2 bg-white/30 hover:bg-white/50 text-white font-medium rounded-md backdrop-blur-lg transition"
+                  >
+                    Send message
+                  </button>
+                </div>
+              </form>
+
+              <!-- Alternative contact / links -->
+              <div class="space-y-4">
+                <div
+                  class="p-6 rounded-lg border border-white/30 bg-white/20 backdrop-blur-md"
+                >
+                  <h3 class="font-medium text-white">
+                    Prefer email or LinkedIn?
+                  </h3>
+                  <p class="text-sm text-gray-200 mt-2">
+                    <strong>Email:</strong>
+                    <a
+                      href="mailto:you@example.com"
+                      class="text-white font-medium hover:underline"
+                      >you@example.com</a
+                    ><br />
+                    <strong>LinkedIn:</strong>
+                    <a
+                      href="https://linkedin.com/in/yourprofile"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-white font-medium hover:underline"
+                      >linkedin.com/in/yourprofile</a
+                    >
+                  </p>
+                </div>
+
+                <div
+                  class="p-6 rounded-lg border border-white/30 bg-white/20 backdrop-blur-md"
+                >
+                  <h4 class="font-medium text-white">Availability</h4>
+                  <p class="mt-2 text-sm text-gray-200">
+                    Open to Remote roles and contracting. Available to start:
+                    <strong>Immediately</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ===== FOOTER ===== -->
+      <footer id="footer" class="border-t bg-white">
+        <div
+          class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <p class="text-sm text-gray-600">
+            &copy; <span id="year"></span> Agbo Emmanuel — Frontend Developer.
+            All rights reserved.
+          </p>
+
+          <div class="flex items-center gap-4">
+            <!-- Social icons (replace hrefs with real links) -->
+            <a
+              href="https://github.com/Agbo-Emmanuel"
+              target="_blank"
+              aria-label="GitHub profile"
+              class="hover:opacity-80"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-700"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.45-3.88-1.45-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.04 11.04 0 012.9-.39c.98.01 1.97.13 2.9.39 2.2-1.5 3.17-1.18 3.17-1.18.64 1.58.24 2.74.12 3.04.74.81 1.18 1.84 1.18 3.1 0 4.44-2.71 5.41-5.29 5.69.42.36.8 1.07.8 2.16 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56A11.52 11.52 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/agbo-emmanuel-b88035344/"
+              target="_blank"
+              aria-label="LinkedIn profile"
+              class="hover:opacity-80"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-700"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.98 3.5C4.98 5 3.86 6.18 2.44 6.18 1.05 6.18 0 5 0 3.5 0 2 1.12.82 2.54.82 3.95.82 4.98 2 4.98 3.5zM.5 8.98h3.88V24H.5zM8.5 8.98h3.72v2.06h.05c.52-.97 1.8-2 3.7-2 3.96 0 4.69 2.61 4.69 6.01V24h-3.87v-7.1c0-1.7-.03-3.89-2.37-3.89-2.38 0-2.74 1.85-2.74 3.77V24H8.5z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://x.com/agborex"
+              target="_blank"
+              aria-label="Twitter profile"
+              class="hover:opacity-80"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-gray-700"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M23 3.01c-.8.36-1.66.6-2.56.71a4.48 4.48 0 001.98-2.47c-.9.53-1.9.9-2.96 1.1A4.48 4.48 0 0016.5 2c-2.48 0-4.49 2.03-4.49 4.53 0 .36.04.72.12 1.06C8.03 7.44 4.26 5.47 1.67 2.49c-.4.7-.64 1.52-.64 2.39 0 1.66.8 3.13 2.03 3.99-.74-.02-1.44-.23-2.05-.57v.06c0 2.31 1.6 4.24 3.72 4.67-.39.11-.8.17-1.23.17-.3 0-.6-.03-.89-.08.6 1.94 2.36 3.36 4.44 3.4A9 9 0 010 20.54a12.72 12.72 0 006.88 2.02c8.26 0 12.78-6.83 12.78-12.77 0-.2 0-.4-.02-.6A9.08 9.08 0 0023 3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Small inline script for dynamic bits -->
+    <script>
+      // Insert current year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
