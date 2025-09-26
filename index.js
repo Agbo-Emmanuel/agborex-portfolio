@@ -12,20 +12,20 @@ const projects = [
     live: "https://www.amazinghealthcareclinic.org/",
   },
   {
-    name: "Project Two",
+    name: "Reborn Necessary Clothing",
     description:
-      "Brief description and key takeaways — performance improvements, accessibility, etc.",
-    image: "", // leave empty if no image
-    github: "#",
-    live: "#",
+      "A modern fashion e-commerce website for purchasing trendy clothing, designed with a clean UI, smooth shopping experience, and responsive layout.",
+    image: "./images/reborn_necessary_clothing_image.png",
+    github: "https://github.com/Agbo-Emmanuel/Reborn-Necessary-Clothing",
+    live: "https://reborn-necessary-clothing-ruddy.vercel.app/",
   },
   {
-    name: "Project Three",
+    name: "NGC Business and Career Fair 2024",
     description:
-      "Short description — highlight outcomes (e.g., reduced load time by 40%).",
-    image: "",
-    github: "#",
-    live: "#",
+      "A dynamic church event website for the NGC Business and Career Fair 2024, featuring program details, speaker highlights. built with a responsive and user-friendly design.",
+    image: "./images/ngc_image.png",
+    github: "https://github.com/Agbo-Emmanuel/ngc-bcf",
+    live: "https://ngc-bcf.vercel.app/",
   },
 ];
 
