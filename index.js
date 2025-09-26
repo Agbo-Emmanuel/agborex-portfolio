@@ -27,6 +27,14 @@ const projects = [
     github: "https://github.com/Agbo-Emmanuel/ngc-bcf",
     live: "https://ngc-bcf.vercel.app/",
   },
+  {
+    name: "Emzy Classic Portfolio",
+    description:
+      "A sleek and modern portfolio website for an artist, showcasing creative works, projects, and achievements with a visually engaging and responsive design.",
+    image: "./images/emzy_classic_image.png",
+    github: "https://github.com/Agbo-Emmanuel/emezy-classic-arist",
+    live: "https://emezy-classic-arist.vercel.app",
+  },
 ];
 
 // Function to render projects
