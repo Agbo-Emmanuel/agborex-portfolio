@@ -35,6 +35,15 @@ const projects = [
     github: "https://github.com/Agbo-Emmanuel/emezy-classic-arist",
     live: "https://emezy-classic-arist.vercel.app",
   },
+  {
+    name: "Compassionate Health Care Service",
+    description:
+      "A responsive hospital website offering healthcare service information with a clean, user-friendly design.",
+    image: "./images/compassionate_health_care_service_image.png",
+    github:
+      "https://github.com/Agbo-Emmanuel/compassionate-health-care-service",
+    live: "https://compassionate-health-care-service.vercel.app/",
+  },
 ];
 
 // Function to render projects
