@@ -13,6 +13,38 @@
       name="description"
       content="Frontend Developer Portfolio — Minimal, responsive, and corporate-ready."
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "hCr6HWDz5ASWnlWav",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_qvssoh3", "template_0fegsmm", this).then(
+              () => {
+                alert("Message sent successfully!");
+                document.getElementById("contact-form").reset();
+              },
+              (error) => {
+                alert("Failed to send message. Try again.");
+                console.error("EmailJS Error:", error);
+              }
+            );
+          });
+      };
+    </script>
   </head>
   <body class="antialiased text-gray-800 bg-gray-50">
     <!-- ===== Page wrapper / container ===== -->
@@ -421,12 +453,7 @@
               class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white/20 backdrop-blur-lg rounded-2xl p-8 shadow-lg border border-white/30"
             >
               <!-- Contact form -->
-              <form
-                class="space-y-4"
-                action="#"
-                method="POST"
-                onsubmit="alert('Replace with your form handler'); return false;"
-              >
+              <form id="contact-form" class="space-y-4" method="POST">
                 <div>
                   <label class="sr-only" for="name">Name</label>
                   <input
