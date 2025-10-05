@@ -3,6 +3,14 @@
 // Array of projects
 const projects = [
   {
+    name: "Resume Analyzer",
+    description:
+      "An AI powered resume analyzer that evaluates resumes and provides feedback to help users improve their job applications.",
+    image: "./images/resume_analyzer_image.png",
+    github: "https://github.com/Agbo-Emmanuel/resume-checker",
+    live: "https://resume-checker-sable.vercel.app/",
+  },
+  {
     name: "Amazing Health Care Clinic",
     description:
       "A responsive healthcare platform built with React and TailwindCSS, focusing on accessibility and user-friendly UI.",
