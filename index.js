@@ -3,6 +3,14 @@
 // Array of projects
 const projects = [
   {
+    name: "EFEELO International Logistics",
+    description:
+      "EFEELO International Logistics is a company that provides reliable, compliant, and cost-effective logistics services",
+    image: "./images/efeelo_image.png",
+    github: "",
+    live: "https://efeelo.vercel.app/",
+  },
+  {
     name: "Resume Analyzer",
     description:
       "An AI powered resume analyzer that evaluates resumes and provides feedback to help users improve their job applications.",
@@ -35,14 +43,14 @@ const projects = [
     github: "https://github.com/Agbo-Emmanuel/ngc-bcf",
     live: "https://ngc-bcf.vercel.app/",
   },
-  {
-    name: "Emzy Classic Portfolio",
-    description:
-      "A sleek and modern portfolio website for an artist, showcasing creative works, projects, and achievements with a visually engaging and responsive design.",
-    image: "./images/emzy_classic_image.png",
-    github: "https://github.com/Agbo-Emmanuel/emezy-classic-arist",
-    live: "https://emezy-classic-arist.vercel.app",
-  },
+  // {
+  //   name: "Emzy Classic Portfolio",
+  //   description:
+  //     "A sleek and modern portfolio website for an artist, showcasing creative works, projects, and achievements with a visually engaging and responsive design.",
+  //   image: "./images/emzy_classic_image.png",
+  //   github: "https://github.com/Agbo-Emmanuel/emezy-classic-arist",
+  //   live: "https://emezy-classic-arist.vercel.app",
+  // },
   {
     name: "Compassionate Health Care Service",
     description:
@@ -89,7 +97,7 @@ function renderProjects() {
           </div>
         </div>
       </article>
-    `
+    `,
     )
     .join("");
 }
